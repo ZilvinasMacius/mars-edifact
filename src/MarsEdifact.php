@@ -17,12 +17,12 @@ class MarsEdifact
 
     public function accept($rawMsg)
     {
-        return $this->handleLoad($rawMsg, 98);
+        return $this->handleLoad($rawMsg, '98');
     }
 
     public function decline($rawMsg)
     {
-        return $this->handleLoad($rawMsg, 99);
+        return $this->handleLoad($rawMsg, '99');
     }
 
     private function handleLoad($rawMsg, $stsCode)
@@ -30,7 +30,7 @@ class MarsEdifact
         $reader = new Reader($rawMsg);
         $code = $reader->readEdiDataValue('UNB', 5);
 
-        $msgNr = $reader->readUNHmessageNumber() + 1;
+        $msgNr = (string) ($reader->readUNHmessageNumber() + 1);
         $receiver = $reader->readUNBInterchangeSender();
         $sender = $reader->readUNBInterchangeRecipient();
         $documentNr = $reader->readEdiDataValue('BGM', 2);
