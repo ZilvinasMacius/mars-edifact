@@ -1,1 +1,1 @@
-edifact
+Mars edifact message helper
