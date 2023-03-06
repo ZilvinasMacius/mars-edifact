@@ -1,5 +1,5 @@
 {
-    "name": "vampyrian/mars-editact",
+    "name": "imas/mars-editact",
     "description": "MARS API edifact",
     "autoload": {
         "psr-4": {
