@@ -6,6 +6,7 @@
             "MarsEditact\\": "src/"
         }
     },
+    "license": "proprietary",
     "authors": [
         {
             "name": "zilvinas macius",
